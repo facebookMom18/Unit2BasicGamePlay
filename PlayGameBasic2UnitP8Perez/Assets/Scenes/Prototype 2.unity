@@ -1239,7 +1239,11 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 15
   xRange: 10
+  zRange: 7
   projectilePrefab: {fileID: 7044614154643091115, guid: 82c51985e811b314ba27c5dc840cb0f2, type: 3}
+  zMin: 1.5
+  zMax: 15.5
+  verticalInput: 0
 --- !u!1001 &1798056685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1343,6 +1347,9 @@ MonoBehaviour:
   - {fileID: 3932424288203875804, guid: 36e7f36c74f597c40a5be0d121878f7f, type: 3}
   - {fileID: 6412536797183290783, guid: b2acac7d5b6265d4ea2b2d1c95ddd3f2, type: 3}
   - {fileID: 6270647889562165022, guid: 7a34e8a2416471d48b2ae5854cd6e989, type: 3}
+  sideSpawnMinZ: 0
+  sideSpawnMaxZ: 0
+  sideSpawnX: 0
 --- !u!4 &1872855079
 Transform:
   m_ObjectHideFlags: 0
