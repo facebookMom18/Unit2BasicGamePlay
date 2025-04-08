@@ -1,13 +1,17 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float _horizontalInput;
     public float _verticalInput;
     public float _speed = 10.0f;
-    //public float _xRange = 0.0f;
+   public float _xRange = 0.0f;
     public GameObject _projectilePrefab;
-    // Start is called before the first frame update
+    private float cooldown = 3;
+    public GameObject dogPrefab;
+
+    
     void Start()
     {
 
@@ -16,6 +20,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cooldown = cooldown - Time.deltaTime;
+        // On spacebar press, send dog
+        if (Input.GetKeyDown(KeyCode.Space) && cooldown <= 4)
+        {
+            cooldown = 4;
+            Instantiate(dogPrefab, transform.position, dogPrefab.transform.rotation);
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(_projectilePrefab, transform.position, _projectilePrefab.transform.rotation);
