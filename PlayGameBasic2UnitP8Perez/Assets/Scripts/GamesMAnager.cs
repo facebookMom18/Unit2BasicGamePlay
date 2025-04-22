@@ -22,7 +22,7 @@ public class GamesMAnager : MonoBehaviour
     }
     public void AddScore(int value)
     {
-
+        Debug.Log("You Scored");
     }
     // Start is called before the first frame update
     void Start()

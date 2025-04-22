@@ -8,7 +8,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     private float lowerBound = -10;
     private float sideBound = 30;
     private GamesMAnager gameManager;
-    // Start is called before the first frame update
+    
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GamesMAnager>();
